@@ -1,0 +1,31 @@
+﻿@model Category
+<form method="post">
+    <div class="border p-3 mt-4">
+
+    
+    <div class="row pb-2">
+        <h2 class text-primary>Create new Category</h2>
+        <hr/>
+    </div>
+    <div class="mb-3 row ">
+       <label asp-for="name"></label>
+       <!--asp for dùng để chỉ định trường thuộc tính cho input-->  
+       <input asp-for="name"  class="form-control" />
+    </div>
+    <div class="mb-3 row ">
+        <label asp-for="displayOrder">Display Order</label>
+        <input asp-for="displayOrder"  class="form-control" />
+    </div>
+    <div class="row">
+        <div class="col-6 col-md-3">
+            <button type="submit" class="btn btn-primary mt-3  form-control" style="width=150px">Create</button>
+        </div>
+        <div class="col-6 col-md-3">
+            <a asp-controller="Category" asp-action="Index" class="btn btn-primary mt-3  form-control" style="width=150px">Back to List</a>
+        </div>
+    </div>
+    
+    
+    </div>
+</form>
+
