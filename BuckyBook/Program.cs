@@ -1,3 +1,6 @@
+using BuckyBook.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace BuckyBook
 {
     public class Program
@@ -8,6 +11,12 @@ namespace BuckyBook
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddDbContext<ApplicationDBContext>(options=>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+
+
+
 
             var app = builder.Build();
 
