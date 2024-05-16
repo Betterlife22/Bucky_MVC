@@ -10,8 +10,10 @@ namespace BuckyBook.Models
         public int id { get; set; }
         [Required]
         [DisplayName("Category Name")]
+        [MaxLength(100)]
         public String name { get; set; }
-        [DisplayName ("Display Order")]  
+        [DisplayName ("Display Order")]
+        [Range (1,100)]  
         
         public int displayOrder { get; set; } 
     }
